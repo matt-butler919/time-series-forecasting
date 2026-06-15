@@ -1,1 +1,7 @@
-# time-series-forecasting
+Time Series Forecasting project
+
+Link to full project - https://docs.google.com/spreadsheets/d/1MtXFLpMJ_Cnl6lOTeQ5xpL4Q1dUlX7H7G4KjlnmJljI/edit?gid=627420119#gid=627420119
+
+Data from US Census Bureau - https://www.census.gov/econ/currentdata/?programCode=MARTS&startYear=2016&endYear=2025&categories[]=44000&dataType=SM&geoLevel=US&adjusted=1&notAdjusted=0&errorData=0#table-results
+
+A time series forecasting model is an analytical method that uses historical data to predict future values. For this project, I used ten years of retail trade data from the US Census Bureau to build a time series forecasting model projecting the next six months of sales. I began by structuring the raw data and calculating basic statistics like 12 month moving average and month over month percentage change. Then I created a month number column to enable seasonal analysis and constructed a seasonality index table that quantifies how each month performs relative to the annual average. For the forecast itself, I used a linear trend model and multiplied each projection by the corresponding seasonality index to produce seasonally adjusted estimates. To validate the model, I held out the final six months of actual data, generated forecasts for that same period using only prior data, and measured accuracy using three standard error metrics - MAE, MAPE, and RMSE. The model achieved a MAPE of 1.8%, indicating the model's predictions were within 1.8% of actual sales on average.
